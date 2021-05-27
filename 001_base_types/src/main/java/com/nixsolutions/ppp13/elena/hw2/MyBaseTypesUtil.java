@@ -1,6 +1,16 @@
 package com.nixsolutions.ppp13.elena.hw2;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.math.BigDecimal;
+
+/**
+ * Реализация интерфейса базовых утилитных операций.
+ */
 public final class MyBaseTypesUtil implements BaseTypesUtil {
+
+    private static final Logger LOG = LogManager.getLogger(BaseTypesUtil.class);
 
     /**
      * Метод деления двух чисел произвольного типа и произвольной размерности.
