@@ -11,15 +11,17 @@ public class Main {
         this.util = new MyBaseTypesUtil();
     }
 
-    /**
-     * Demonstrates division function.
-     */
-    private String division() {
-        return util.div("6.28", "2");
+    private void division() {
+        util.div("6.28", "2");
+    }
+
+    private void sorting() {
+        util.sort(new int[]{ 7, 15, 10, 20 });
     }
 
     public static void main(String[] args) {
         Main show = new Main();
         show.division();
+        show.sorting();
     }
 }

@@ -13,4 +13,12 @@ public interface BaseTypesUtil {
      * @return the result of the division, no special formatting is applied
      */
     String div(String value1, String value2);
+
+    /**
+     * Метод возвращает отсортированный массив, который подается на вход.
+     *
+     * @param array исходный массив, остаётся без изменений после вызова этого метода
+     * @return отсортированный массив
+     */
+    int[] sort(int[] array);
 }

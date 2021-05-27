@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 /**
  * Реализация интерфейса базовых утилитных операций.
@@ -32,5 +33,14 @@ public final class MyBaseTypesUtil implements BaseTypesUtil {
         String output = result.toString();
         LOG.debug("The result is: {}", output);
         return output;
+    }
+
+    @Override
+    public int[] sort(int[] array) {
+        LOG.debug("Passed to sort: {}", array);
+        int[] sorted = Arrays.copyOf(array, array.length);
+        Arrays.sort(sorted);
+        LOG.debug("Sorted: {}", sorted);
+        return sorted;
     }
 }
