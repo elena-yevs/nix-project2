@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
+import java.util.Locale;
 
 /**
  * Реализация интерфейса базовых утилитных операций.
@@ -42,5 +43,14 @@ public final class MyBaseTypesUtil implements BaseTypesUtil {
         Arrays.sort(sorted);
         LOG.debug("Sorted: {}", sorted);
         return sorted;
+    }
+
+    @Override
+    public String format(float n, String language) {
+        LOG.debug("Formatting {} using language {}...", n, language);
+        Locale locale = new Locale(language);
+        String result = String.format(locale, "%f", n);
+        LOG.debug("Formatted: {}", result);
+        return result;
     }
 }

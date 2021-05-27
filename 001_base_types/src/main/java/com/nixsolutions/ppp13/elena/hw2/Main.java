@@ -19,9 +19,14 @@ public class Main {
         util.sort(new int[]{ 7, 15, 10, 20 });
     }
 
+    private void formatting() {
+        util.format(1.618033988749894f, "RU");
+    }
+
     public static void main(String[] args) {
         Main show = new Main();
         show.division();
         show.sorting();
+        show.formatting();
     }
 }
