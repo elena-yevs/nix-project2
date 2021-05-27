@@ -6,11 +6,11 @@ package com.nixsolutions.ppp13.elena.hw2;
 public interface BaseTypesUtil {
 
     /**
-     * Divides two numbers with arbitrary type and precision.
+     * Выполняет деление деление двух чисел произвольных типов.
      *
-     * @param value1 the divisor
-     * @param value2 the divider
-     * @return the result of the division, no special formatting is applied
+     * @param value1 делимое
+     * @param value2 делитель
+     * @return результат деления отформатированный по умолчанию
      */
     String div(String value1, String value2);
 
