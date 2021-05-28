@@ -1,7 +1,7 @@
 package com.nixsolutions.ppp13.elena.hw2;
 
 /**
- * Utility functions for the basic operations.
+ * Утилиты для операций с числовыми значениями в строках.
  */
 public interface BaseTypesUtil {
 
