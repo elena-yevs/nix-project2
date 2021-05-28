@@ -11,6 +11,9 @@ public class Main {
         this.util = new MyBaseTypesUtil();
     }
 
+    private void sum() {
+        util.plus("26.02", "2.03");
+    }
     private void subtraction(){
         util.minus("80.54", "60.33");
     }
@@ -38,5 +41,6 @@ public class Main {
         show.formatting();
         show.multiplication();
         show.subtraction();
+        show.sum();
     }
 }

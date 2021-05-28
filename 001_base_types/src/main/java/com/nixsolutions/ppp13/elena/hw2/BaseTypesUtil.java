@@ -4,6 +4,14 @@ package com.nixsolutions.ppp13.elena.hw2;
  * Utility functions for the basic operations.
  */
 public interface BaseTypesUtil {
+    /**
+     * Выполняет сложение двух чисел произвольных типов.
+     *
+     * @param value1 первое слагаемое, число, к которому прибалвяем другое
+     * @param value2 второе слагаемое, число, которое добавляем к первому
+     * @return сумма двух чисел
+     */
+    String plus(String value1, String value2);
 
     /**
      * Выполняет вычитание двух чисел произвольных типов.
