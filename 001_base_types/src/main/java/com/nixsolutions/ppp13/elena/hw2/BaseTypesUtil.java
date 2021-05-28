@@ -13,6 +13,7 @@ public interface BaseTypesUtil {
      * @return разность двух чисел
      */
     String minus(String value1, String value2);
+
     /**
      * Выполняет умножение двух чисел произвольных типов.
      *
