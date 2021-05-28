@@ -4,6 +4,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Locale;
 
@@ -107,6 +109,19 @@ public final class MyBaseTypesUtil implements BaseTypesUtil {
         Locale locale = new Locale(language);
         String result = String.format(locale, "%f", n);
         LOG.debug("Formatted: {}.", result);
+        return result;
+    }
+
+    @Override
+    public String toggleScientificNotation(String str) {
+        LOG.debug("Toggling {} ...", str);
+        BigDecimal number = new BigDecimal(str);
+        boolean isScientific = str.toUpperCase().contains("E");
+        NumberFormat numFormat = isScientific
+                ? new DecimalFormat("0")
+                : new DecimalFormat("0.################E0");
+        String result = numFormat.format(number);
+        LOG.debug("Toggled: {}.", result);
         return result;
     }
 }

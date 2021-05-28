@@ -35,6 +35,10 @@ public class Main {
         util.format(1.618033988749894f, "RU");
     }
 
+    private void scientificNotation(){
+        util.toggleScientificNotation("12345678901234567890123456789012345678901234567890");
+    }
+
     public static void main(String[] args) {
         Main show = new Main();
         show.division();
@@ -43,5 +47,6 @@ public class Main {
         show.multiplication();
         show.subtraction();
         show.sum();
+        show.scientificNotation();
     }
 }
