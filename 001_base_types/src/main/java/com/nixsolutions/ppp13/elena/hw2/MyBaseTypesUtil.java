@@ -15,10 +15,28 @@ public final class MyBaseTypesUtil implements BaseTypesUtil {
     private static final Logger LOG = LogManager.getLogger(BaseTypesUtil.class);
 
     /**
+     * Сложение двух чисел произвольного типа и произвольной размерности.
+     *
+     * @param value1 первое слагаемое
+     * @param value2 второе слагаемое
+     * @return сумма двух чисел
+     */
+    @Override
+    public String plus(String value1, String value2) {
+        LOG.debug("Increase {} by {}.", value1, value2);
+        BigDecimal firstAddend = new BigDecimal(value1);
+        BigDecimal secondAddend = new BigDecimal(value2);
+        BigDecimal sumOfTotal = firstAddend.add(secondAddend);
+        String output = sumOfTotal.toString();
+        LOG.debug("The result is: {}.", output);
+        return output;
+    }
+
+    /**
      * Вычитание двух чисел произвольного типа и произвольной размерности.
      *
-     * @param value1 уменьшаемое, число от которого отнимаем часть
-     * @param value2 вычитаемое, число, которое отнимаем от уменьшаемого
+     * @param value1 уменьшаемое
+     * @param value2 вычитаемое
      * @return difference - разность, результат вычитания одного числа из другого
      */
     @Override
@@ -37,8 +55,8 @@ public final class MyBaseTypesUtil implements BaseTypesUtil {
      *
      * <p>Результат не должен специально форматироваться.
      *
-     * @param value1 первый множитель, число, которое умножаем
-     * @param value2 второй множитель, число на которое умножаем
+     * @param value1 первый множитель
+     * @param value2 второй множитель
      * @return product - произведение, результат умножения двух чисел
      */
     @Override
@@ -59,8 +77,8 @@ public final class MyBaseTypesUtil implements BaseTypesUtil {
      *
      * <p>Частное округляется в соответствии с режимом mode.
      *
-     * @param value1 делимое, число, подвергаемое делению
-     * @param value2 делитель, число, на которое делим делимое
+     * @param value1 делимое
+     * @param value2 делитель
      * @return quotient - частное, результат деления двух чисел
      */
     @Override
