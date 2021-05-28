@@ -119,7 +119,7 @@ public final class MyBaseTypesUtil implements BaseTypesUtil {
         boolean isScientific = str.toUpperCase().contains("E");
         NumberFormat numFormat = isScientific
                 ? new DecimalFormat("0")
-                : new DecimalFormat("0.#####E0");
+                : new DecimalFormat("0.################E0");
         String result = numFormat.format(number);
         LOG.debug("Toggled: {}.", result);
         return result;
