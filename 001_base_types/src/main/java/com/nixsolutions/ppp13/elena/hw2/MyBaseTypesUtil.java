@@ -15,6 +15,26 @@ public final class MyBaseTypesUtil implements BaseTypesUtil {
     private static final Logger LOG = LogManager.getLogger(BaseTypesUtil.class);
 
     /**
+     * Умножение двух чисел произвольного типа и произвольной размерности.
+     *
+     * <p>Результат не должен специально форматироваться.
+     *
+     * @param value1 первый множитель, число, которое умножаем
+     * @param value2 второй множитель, число на которое умножаем
+     * @return product - произведение, результат умножения двух чисел
+     */
+    @Override
+    public String mul(String value1, String value2) {
+        LOG.debug("Multiply {} by {}.", value1, value2);
+        BigDecimal multiplier = new BigDecimal(value1);
+        BigDecimal multiplicand = new BigDecimal(value1);
+        BigDecimal product = multiplier.multiply(multiplicand);
+        String output = product.toString();
+        LOG.debug("The result is: {}", output);
+        return output;
+    }
+
+    /**
      * Метод деления двух чисел произвольного типа и произвольной размерности.
      *
      * <p>Результат не должен специально форматироваться.
@@ -22,7 +42,7 @@ public final class MyBaseTypesUtil implements BaseTypesUtil {
      * <p>Частное округляется в соответствии с режимом mode.
      *
      * @param value1 делимое, число, подвергаемое делению
-     * @param value2  делитель, число, на которое делим делимое
+     * @param value2 делитель, число, на которое делим делимое
      * @return quotient - частное, результат деления двух чисел
      */
     @Override

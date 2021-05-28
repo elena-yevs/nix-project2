@@ -11,12 +11,16 @@ public class Main {
         this.util = new MyBaseTypesUtil();
     }
 
+    private void multiplication() {
+        util.mul("65.78", "3.78");
+    }
+
     private void division() {
         util.div("6.28", "2");
     }
 
     private void sorting() {
-        util.sort(new int[]{ 7, 15, 10, 20 });
+        util.sort(new int[]{7, 15, 10, 20});
     }
 
     private void formatting() {
@@ -28,5 +32,8 @@ public class Main {
         show.division();
         show.sorting();
         show.formatting();
+        show.multiplication();
     }
+
+
 }
