@@ -11,8 +11,12 @@ public class Main {
         this.util = new MyBaseTypesUtil();
     }
 
+    private void subtraction(){
+        util.minus("80.54", "60.33");
+    }
+
     private void multiplication() {
-        util.mul("65.78", "3.78");
+        util.mul("2.45", "4.89");
     }
 
     private void division() {
@@ -33,5 +37,6 @@ public class Main {
         show.sorting();
         show.formatting();
         show.multiplication();
+        show.subtraction();
     }
 }

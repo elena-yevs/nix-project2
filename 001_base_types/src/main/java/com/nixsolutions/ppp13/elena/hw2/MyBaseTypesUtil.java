@@ -45,10 +45,10 @@ public final class MyBaseTypesUtil implements BaseTypesUtil {
     public String mul(String value1, String value2) {
         LOG.debug("Multiply {} by {}.", value1, value2);
         BigDecimal multiplier = new BigDecimal(value1);
-        BigDecimal multiplicand = new BigDecimal(value1);
+        BigDecimal multiplicand = new BigDecimal(value2);
         BigDecimal product = multiplier.multiply(multiplicand);
         String output = product.toString();
-        LOG.debug("The result is: {}", output);
+        LOG.debug("The result is: {}.", output);
         return output;
     }
 
@@ -70,16 +70,16 @@ public final class MyBaseTypesUtil implements BaseTypesUtil {
         BigDecimal divisor = new BigDecimal(value2);
         BigDecimal result = dividend.divide(divisor);
         String output = result.toString();
-        LOG.debug("The result is: {}", output);
+        LOG.debug("The result is: {}.", output);
         return output;
     }
 
     @Override
     public int[] sort(int[] array) {
-        LOG.debug("Passed to sort: {}", array);
+        LOG.debug("Passed to sort: {}.", array);
         int[] sorted = Arrays.copyOf(array, array.length);
         Arrays.sort(sorted);
-        LOG.debug("Sorted: {}", sorted);
+        LOG.debug("Sorted: {}.", sorted);
         return sorted;
     }
 
@@ -88,7 +88,7 @@ public final class MyBaseTypesUtil implements BaseTypesUtil {
         LOG.debug("Formatting {} using language {}...", n, language);
         Locale locale = new Locale(language);
         String result = String.format(locale, "%f", n);
-        LOG.debug("Formatted: {}", result);
+        LOG.debug("Formatted: {}.", result);
         return result;
     }
 }

@@ -6,6 +6,14 @@ package com.nixsolutions.ppp13.elena.hw2;
 public interface BaseTypesUtil {
 
     /**
+     * Выполняет вычитание двух чисел произвольных типов.
+     *
+     * @param value1 уменьшаемое, число от которого отнимаем часть
+     * @param value2 вычитаемое, число, которое отнимаем от уменьшаемого
+     * @return разность двух чисел
+     */
+    String minus(String value1, String value2);
+    /**
      * Выполняет умножение двух чисел произвольных типов.
      *
      * @param value1 первый множитель
