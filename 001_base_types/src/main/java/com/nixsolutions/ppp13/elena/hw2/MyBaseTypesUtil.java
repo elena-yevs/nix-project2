@@ -15,6 +15,24 @@ public final class MyBaseTypesUtil implements BaseTypesUtil {
     private static final Logger LOG = LogManager.getLogger(BaseTypesUtil.class);
 
     /**
+     * Вычитание двух чисел произвольного типа и произвольной размерности.
+     *
+     * @param value1 уменьшаемое, число от которого отнимаем часть
+     * @param value2 вычитаемое, число, которое отнимаем от уменьшаемого
+     * @return difference - разность, результат вычитания одного числа из другого
+     */
+    @Override
+    public String minus(String value1, String value2) {
+        LOG.debug("Decrease {} by {}.", value1, value2);
+        BigDecimal minuend = new BigDecimal(value1);
+        BigDecimal subtrahend = new BigDecimal(value2);
+        BigDecimal difference = minuend.subtract(subtrahend);
+        String output = difference.toString();
+        LOG.debug("The result is: {}.", output);
+        return output;
+    }
+
+    /**
      * Умножение двух чисел произвольного типа и произвольной размерности.
      *
      * <p>Результат не должен специально форматироваться.

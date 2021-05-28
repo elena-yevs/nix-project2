@@ -34,6 +34,4 @@ public class Main {
         show.formatting();
         show.multiplication();
     }
-
-
 }
