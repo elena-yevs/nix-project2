@@ -14,6 +14,7 @@ public class Main {
     private void sum() {
         util.plus("26.02", "2.03");
     }
+
     private void subtraction(){
         util.minus("80.54", "60.33");
     }
